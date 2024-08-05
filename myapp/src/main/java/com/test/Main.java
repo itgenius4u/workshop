@@ -7,6 +7,8 @@ public class Main {
         System.out.println("Hello world!");
         AnnotationConfigApplicationContext context = 
             new AnnotationConfigApplicationContext(AppConfig.class);
+            Employee employee = context.getBean(Employee.class);
+            System.out.println(employee.getAddress().getLocation());
         context.close();
     }
 }
