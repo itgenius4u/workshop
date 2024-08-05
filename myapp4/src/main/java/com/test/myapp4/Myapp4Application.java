@@ -2,6 +2,8 @@ package com.test.myapp4;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
 // 1. 도메인에 대한 이해
 // 2. 엔터티에 구분
@@ -44,20 +46,18 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 // Filters, Sorts, Pagingnation
 // /books?author=Rowling&sort=title
 
-// /addNewEmployee 
-// /updateEmployee 
-// /deleteEmployee 
-// /deleteAllEmployees 
-// /promoteEmployee 
-// /promoteAllEmployees
+// /addNewEmployee POST /employees
+// /updateEmployee PUT /employees/1
+// /deleteEmployee DELETE /employees/1
+// /deleteAllEmployees  DELETE /employees
+// /promoteEmployee GET /employees/1  
+// /promoteAllEmployees GET /employees
 
 
-
-
-
-
-
-
+// @Configuration
+// @ComponentScan(basePackages = "com.test.myclass")
+// class AppConfig {
+// }
 
 
 @SpringBootApplication
