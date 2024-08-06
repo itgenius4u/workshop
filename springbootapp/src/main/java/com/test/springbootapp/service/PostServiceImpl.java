@@ -1,6 +1,7 @@
 package com.test.springbootapp.service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +18,8 @@ public class PostServiceImpl implements PostService {
     
     @Override
     public List<PostDto> getAllPosts() {
-        return postRepository.findAll();
+        List<Post> posts = postRepository.findAll();
+        return posts.stream().map(post -> mapToDTO(post)).collect(Collectors.toList());
     }
     
     // convert Entity into DTO
