@@ -35,6 +35,25 @@ http://naver.me/FZ2g7qU6
     6. @DeleteMapping
     7. ResponseEntity to Http Response
     8. Spring MVC Controller - @RequestMapping
+ 
+      Posts Management 
+      - Create, Read, Update, Delete Posts
+      - Pagination, Sorting
+      Comments Management
+      - Create, Read, Update, Delete Comments
+      Authentication & Authorization
+      - Register, Login, Security
+      Category Management
+      - Create, Read, Update, Delete Category
+      
+      * REST APIs for Post Resource			
+      Http	 Method	URL Path									Status Code			설명
+      GET		 /api/posts											200(OK)				Get all posts
+      GET		 /api/posts/{id}									200(OK)				Get post by Id
+      POST	 /api/posts											201(CREATED)		Create a new post
+      PUT		 /api/posts/{id}									200(OK)				Update existing post with Id
+      DELETE	 /api/posts/{id}									200(OK)				Delete post by Id
+      GET		 /api/posts?pageSize=5&pageNo=18&sortBy=firstName	200(OK)				Paging, Sorting posts    
 
 
 ### Day 3: Security and Authentication
