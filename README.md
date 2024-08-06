@@ -17,7 +17,7 @@ http://naver.me/FZ2g7qU6
 - Implementing CRUD (Create, Read, Update, Delete) APIs
 - Exception handling and validation
 
-- Http Status Codes
+* Http Status Codes
     • 200 OK
     • 201 Created
     • 400 Bad Request            
