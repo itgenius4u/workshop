@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,6 +25,7 @@ public class StudentController {
         .header("custom-header", "Dennis").
         body(student);
     }
+    // http://localhost:8080/students
     @GetMapping
     public ResponseEntity<List<Student>> getStudents() {
         List<Student> students = new ArrayList<>();
@@ -31,5 +33,15 @@ public class StudentController {
         students.add(new Student(1, "Dennis2", "Lee"));
         return ResponseEntity.ok(students);
     }
-
+    // {id} -> @PathVariable
+    // http://localhost:8080/students/1/Dennis/Lee
+    @GetMapping("{id}/{first-name}/{last-name}")
+    public ResponseEntity<Student> studentPathVariable(
+        @PathVariable("id") int studentId,
+        @PathVariable("first-name") String firstName,
+        @PathVariable("last-name") String lastName){
+        Student student = 
+        new Student(studentId, firstName, lastName);
+        return ResponseEntity.ok(student);
+    }
 }
