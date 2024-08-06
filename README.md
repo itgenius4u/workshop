@@ -10,14 +10,8 @@ http://naver.me/FZ2g7qU6
 - RESTful API design principles
 - Spring Boot project structure and configuration
 - Http Status
-      <br> https://en.wikipedia.org/wiki/List_of_HTTP_status_codes   
-
-### Day 2: Core Features of Spring Boot
-- Database integration using Spring Data JPA
-- Implementing CRUD (Create, Read, Update, Delete) APIs
-- Exception handling and validation
-
-* Http Status Codes
+      <br> https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+  * Http Status Codes
     - 200 OK
     - 201 Created
     - 400 Bad Request            
@@ -25,6 +19,13 @@ http://naver.me/FZ2g7qU6
     - 403 Forbidden
     - 404 Not Found
     - 500 Internal Server Error
+
+### Day 2: Core Features of Spring Boot
+- Database integration using Spring Data JPA
+- Implementing CRUD (Create, Read, Update, Delete) APIs
+- Exception handling and validation
+
+
 
 * Spring Boot REST API 애너테이션
     1. @RestController, @GetMapping
