@@ -24,8 +24,6 @@ http://naver.me/FZ2g7qU6
 - Implementing CRUD (Create, Read, Update, Delete) APIs
 - Exception handling and validation
 
-
-
 * Spring Boot REST API 애너테이션
     1. @RestController, @GetMapping
     2. Java Bean as JSON
