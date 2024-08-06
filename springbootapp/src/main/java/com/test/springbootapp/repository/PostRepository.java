@@ -2,9 +2,10 @@ package com.test.springbootapp.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.test.springbootapp.dto.PostDto;
+import com.test.springbootapp.entity.Post;
+
 
 public interface PostRepository
-    extends JpaRepository<PostDto, Long> {
+    extends JpaRepository<Post, Long> {
         //List<Post> getPostByFirstName(String firstName);
 }
