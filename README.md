@@ -17,6 +17,34 @@ http://naver.me/FZ2g7qU6
 - Implementing CRUD (Create, Read, Update, Delete) APIs
 - Exception handling and validation
 
+- Http Status Codes
+
+            • 200 OK: This code indicates that the request is successful and the response content is returned to the
+            client as appropriate.
+            • 201 Created: This code indicates that the request is successful and a new resource is created.
+            • 400 Bad Request: This code indicates that the server failed to process the request because of the
+            malformed syntax in the request. The client can try again after correcting the request.
+            • 401 Unauthorized: This code indicates that authentication is required for the resource. The client can
+            try again with appropriate authentication.
+            • 403 Forbidden: This code indicates that the server is refusing to respond to the request even if the
+            request is valid. The reason will be listed in the body content if the request is not a HEAD method.
+            • 404 Not Found: This code indicates that the requested resource is not found at the location specified in
+            the request.
+            • 500 Internal Server Error: This code indicates a generic error message, and it tells that an unexpected
+            error occurred on the server and that the request cannot be fulfilled.
+            
+            * Spring Boot REST API 애너테이션
+            1. @RestController, @GetMapping
+            2. Java Bean as JSON
+            3. List as JSON
+            2. @PathVariable
+            3. @RequestParam
+            4. @PostMapping, @RequestBody
+            5. @PutMapping, @RequestBody
+            6. @DeleteMapping
+            7. ResponseEntity to Http Response
+            8. Spring MVC Controller - @RequestMapping
+
 ### Day 3: Security and Authentication
 - Securing APIs with Spring Security
 - JWT-based authentication and access control
