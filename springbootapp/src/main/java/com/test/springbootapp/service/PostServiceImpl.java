@@ -5,7 +5,6 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.test.springbootapp.dto.PostDto;
 import com.test.springbootapp.entity.Post;
 import com.test.springbootapp.repository.PostRepository;
@@ -49,23 +48,31 @@ public class PostServiceImpl implements PostService {
         return postResponse;
     }
 
-
     @Override
     public PostDto getPostById(Long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getPostById'");
+        Post post = postRepository.findById(id).get();
+        return mapToDTO(post);
     }
 
     @Override
     public PostDto updatePost(PostDto postDto, Long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'updatePost'");
+        Post post = postRepository.findById(id).get();
+
+        post.setTitle(postDto.getTitle());
+        post.setDescription(postDto.getDescription());
+        post.setContent(postDto.getContent());
+
+        Post updatedPost = postRepository.save(post);
+        return mapToDTO(updatedPost);
     }
 
     @Override
     public void deletePostById(Long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deletePostById'");
-    }
+        Post post = postRepository.findById(id).get();
+        postRepository.delete(post);   }
 
+
+    
+
+    
 }

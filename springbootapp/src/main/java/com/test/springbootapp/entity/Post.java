@@ -23,4 +23,6 @@ public class Post {
     private String description;
     private String content;
 
+    // private String price;
+
 }
