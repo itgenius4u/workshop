@@ -11,7 +11,6 @@ http://naver.me/FZ2g7qU6
 - Spring Boot project structure and configuration
 - Http Status
       <br> https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
-  * Http Status Codes
     - 200 OK
     - 201 Created
     - 400 Bad Request            
