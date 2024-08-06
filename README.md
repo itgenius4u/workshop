@@ -10,7 +10,7 @@ http://naver.me/FZ2g7qU6
 - RESTful API design principles
 - Spring Boot project structure and configuration
 - Http Status
-      https://en.wikipedia.org/wiki/List_of_HTTP_status_codes   
+      <br> https://en.wikipedia.org/wiki/List_of_HTTP_status_codes   
 
 ### Day 2: Core Features of Spring Boot
 - Database integration using Spring Data JPA
