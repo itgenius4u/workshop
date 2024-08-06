@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.test.springbootapp.dto.PostDto;
 import com.test.springbootapp.entity.Post;
+import com.test.springbootapp.exception.ResourceNotFoundException;
 import com.test.springbootapp.repository.PostRepository;
 
 @Service
@@ -50,13 +51,13 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public PostDto getPostById(Long id) {
-        Post post = postRepository.findById(id).get();
+        Post post = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post", "id", id));
         return mapToDTO(post);
     }
 
     @Override
     public PostDto updatePost(PostDto postDto, Long id) {
-        Post post = postRepository.findById(id).get();
+        Post post = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post", "id", id));
 
         post.setTitle(postDto.getTitle());
         post.setDescription(postDto.getDescription());
@@ -68,7 +69,7 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public void deletePostById(Long id) {
-        Post post = postRepository.findById(id).get();
+        Post post = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post", "id", id));
         postRepository.delete(post);   
     }
 }
