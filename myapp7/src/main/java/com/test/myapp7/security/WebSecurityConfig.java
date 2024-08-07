@@ -18,7 +18,7 @@ import org.springframework.security.core.userdetails.User;
 @EnableWebSecurity
 public class WebSecurityConfig {
 
-  @Bean 
+   @Bean 
    protected UserDetailsService userDetailsService() {
       UserDetails user = User.builder()
          .username("user")
@@ -31,6 +31,7 @@ public class WebSecurityConfig {
     protected PasswordEncoder passwordEncoder() { 
       return new BCryptPasswordEncoder(); 
     }
+    
     @Bean
     protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http.csrf(AbstractHttpConfigurer::disable)
