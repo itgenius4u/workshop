@@ -18,6 +18,12 @@ import org.springframework.security.core.userdetails.User;
 @EnableWebSecurity
 public class WebSecurityConfig {
 
+   // @Bean
+   // public UserDetailsService userDetailsService()
+   // public PasswordEncoder passwordEnCoder()
+   // SecurityFilterChain filterChain(HttpSecurity http)
+   // WebSecurityCustomizer webSecurityCustomizer
+
    @Bean 
    protected UserDetailsService userDetailsService() {
       UserDetails user = User.builder()
