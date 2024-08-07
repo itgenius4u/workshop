@@ -55,6 +55,9 @@ http://naver.me/FZ2g7qU6
       DELETE	 /api/posts/{id}									200(OK)				Delete post by Id
       GET		 /api/posts?pageSize=5&pageNo=18&sortBy=firstName	200(OK)				Paging, Sorting posts    
 
+      * Actuator 모든 항목 및 실행시 properties 값 보여주는 옵션
+      management.endpoints.web.exposure.include=*
+      management.endpoint.env.show-values=ALWAYS
 
 ### Day 3: Security and Authentication
 - Securing APIs with Spring Security
