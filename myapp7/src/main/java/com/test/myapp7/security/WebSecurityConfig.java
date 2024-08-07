@@ -33,16 +33,20 @@ public class WebSecurityConfig {
     }
     
     @Bean
-    protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        return http.csrf(AbstractHttpConfigurer::disable)
-        .authorizeHttpRequests(
-           request -> request.requestMatchers("/login").permitAll()
-           .requestMatchers("/**").authenticated()
-        )
-        .formLogin(Customizer.withDefaults())      
-        .logout(config -> config  
-        .logoutUrl("/logout") 
-        .logoutSuccessUrl("/login")) 
-        .build();
-    }
+    protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception { 
+       return http
+          .csrf(AbstractHttpConfigurer::disable)
+          .authorizeHttpRequests(
+             request -> request.requestMatchers("/login").permitAll()
+             .requestMatchers("/**").authenticated()
+          )
+          .formLogin(form -> form.loginPage("/login")
+             .defaultSuccessUrl("/")
+             .failureUrl("/login?error=true")
+             .permitAll())       
+          .logout(config -> config  
+          .logoutUrl("/logout") 
+          .logoutSuccessUrl("/login")) 
+          .build();
+    }   
 }
