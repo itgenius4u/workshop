@@ -24,7 +24,7 @@ public class CustomExceptionHandler
         return errorMap;
     }
 
-    @ResponseStatus(HttpStatus.NOT_FOUND);
+    @ResponseStatus(HttpStatus.NOT_FOUND)
     @ExceptionHandler(UserNotFoundException.class)
     public Map<String,String>handleUserNotFoundException(UserNotFoundException exception)
     {
