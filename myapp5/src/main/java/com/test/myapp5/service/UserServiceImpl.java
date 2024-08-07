@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.test.myapp5.dto.UserDto;
 import com.test.myapp5.entity.User;
+import com.test.myapp5.exception.UserNotFoundException;
 import com.test.myapp5.repository.UserRepository;
 
 @Service
@@ -30,12 +31,11 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public Optional<User> getUserById(int id) {
+    public Optional<User> getUserById(int id) throws UserNotFoundException {
         Optional<User> user = userRepository.findById(id);
         if(user.isPresent()){
             return user;
         }
-        return null;
+        throw new UserNotFoundException("User Not Found id : " + id);
     }
-
 }
