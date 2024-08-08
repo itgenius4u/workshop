@@ -2,101 +2,21 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Spring Boot-Myapp2Application<myapp2>",
+            "name": "Spring Boot-Myapp10Application<myapp10>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "mainClass": "com.test.myapp2.Myapp2Application",
-            "projectName": "myapp2",
+            "mainClass": "com.test.myapp10.Myapp10Application",
+            "projectName": "myapp10",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         },
         {
             "type": "java",
-            "name": "Spring Boot-Myapp4Application<myapp4>",
+            "name": "Spring Boot-Myapp11Application<myapp11>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "mainClass": "com.test.myapp4.Myapp4Application",
-            "projectName": "myapp4",
-            "args": "",
-            "envFile": "${workspaceFolder}/.env"
-        },
-        {
-            "type": "java",
-            "name": "Spring Boot-Myapp3Application<myapp3>",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "com.test.myapp3.Myapp3Application",
-            "projectName": "myapp3",
-            "args": "",
-            "envFile": "${workspaceFolder}/.env"
-        },
-        {
-            "type": "java",
-            "name": "Spring Boot-SpringbootApplication<springboot>",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "com.test.springboot.SpringbootApplication",
-            "projectName": "springboot",
-            "args": "",
-            "envFile": "${workspaceFolder}/.env"
-        },
-        {
-            "type": "java",
-            "name": "Spring Boot-SpringbootappApplication<springbootapp>",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "com.test.springbootapp.SpringbootappApplication",
-            "projectName": "springbootapp",
-            "args": "",
-            "envFile": "${workspaceFolder}/.env"
-        },
-        {
-            "type": "java",
-            "name": "Spring Boot-Myapp5Application<myapp5>",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "com.test.myapp5.Myapp5Application",
-            "projectName": "myapp5",
-            "args": "",
-            "envFile": "${workspaceFolder}/.env"
-        },
-        {
-            "type": "java",
-            "name": "Spring Boot-Myapp6Application<myapp6>",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "com.test.myapp6.Myapp6Application",
-            "projectName": "myapp6",
-            "args": "",
-            "envFile": "${workspaceFolder}/.env"
-        },
-        {
-            "type": "java",
-            "name": "Spring Boot-Myapp7Application<myapp7>",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "com.test.myapp7.Myapp7Application",
-            "projectName": "myapp7",
-            "args": "",
-            "envFile": "${workspaceFolder}/.env"
-        },
-        {
-            "type": "java",
-            "name": "Spring Boot-Myapp8Application<myapp8>",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "com.test.myapp8.Myapp8Application",
-            "projectName": "myapp8",
-            "args": "",
-            "envFile": "${workspaceFolder}/.env"
-        },
-        {
-            "type": "java",
-            "name": "Spring Boot-Myapp9Application<myapp9>",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "com.test.myapp9.Myapp9Application",
-            "projectName": "myapp9",
+            "mainClass": "com.test.myapp11.Myapp11Application",
+            "projectName": "myapp11",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
