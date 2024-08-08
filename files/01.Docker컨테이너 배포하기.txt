@@ -11,6 +11,13 @@ ENTRYPOINT ["java","-jar","./app.jar"]
 docker build -t myapp2:0.1 .
 docker run --name myapp2 -d -p 8080:8080 myapp2:0.1
 
+=> Cloud Native Buildpacks로 하는 방법
+maven인경우
+mvn spring-boot:build-image
+
+gradle인 경우
+./gradlew bootBuildImage
+
 
 - docker run으로 배포하기
 docker network create -d bridge mynet
