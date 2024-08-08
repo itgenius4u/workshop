@@ -2,7 +2,9 @@ package com.test.myapp11.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -35,17 +37,22 @@ public class SecurityConfig {
         }).httpBasic(Customizer.withDefaults());
         return http.build();
     }
-
     @Bean
-    public UserDetailsService userDetailsService() {
-        UserDetails user1 = User.builder().username("user1")
-        .password(passwordEncoder().encode("1234"))
-        .roles("USER")
-        .build();
-        UserDetails user2 = User.builder().username("user2")
-        .password(passwordEncoder().encode("1234"))
-        .roles("ADMIN")
-        .build();
-        return new InMemoryUserDetailsManager(user1, user2);
-    }
+    public AuthenticationManager authenticationManager(
+        AuthenticationConfiguration configuration) throws Exception {
+            return configuration.getAuthenticationManager();
+        }
+
+    // @Bean
+    // public UserDetailsService userDetailsService() {
+    //     UserDetails user1 = User.builder().username("user1")
+    //     .password(passwordEncoder().encode("1234"))
+    //     .roles("USER")
+    //     .build();
+    //     UserDetails user2 = User.builder().username("user2")
+    //     .password(passwordEncoder().encode("1234"))
+    //     .roles("ADMIN")
+    //     .build();
+    //     return new InMemoryUserDetailsManager(user1, user2);
+    // }
 }
