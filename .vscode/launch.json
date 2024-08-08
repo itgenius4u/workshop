@@ -2,21 +2,21 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Spring Boot-Myapp10Application<myapp10>",
+            "name": "Spring Boot-SpringSecurityDemoApplication<myapp12>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "mainClass": "com.test.myapp10.Myapp10Application",
-            "projectName": "myapp10",
+            "mainClass": "com.example.SpringSecurityDemo.SpringSecurityDemoApplication",
+            "projectName": "myapp12",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         },
         {
             "type": "java",
-            "name": "Spring Boot-Myapp11Application<myapp11>",
+            "name": "Spring Boot-JwtDemoApplication<myapp12>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "mainClass": "com.test.myapp11.Myapp11Application",
-            "projectName": "myapp11",
+            "mainClass": "com.test.myapp12.JwtDemoApplication",
+            "projectName": "myapp12",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
