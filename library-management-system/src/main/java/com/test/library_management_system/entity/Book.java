@@ -14,7 +14,7 @@ public class Book {
     private String title;
     private String author;
     private boolean borrowed;
-    @ManyToMany
+    @ManyToOne
     @JoinColumn(name = "user_id")
     private User borrowedBy;
 }
