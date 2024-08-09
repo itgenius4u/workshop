@@ -1,5 +1,5 @@
 docker build -t library-app .
-docker run -p 8080:8080 -d --name library-db library-db:0.0.1
+docker run -p 8080:8080 -d --name library-app library-app:0.0.1
 
 mvn clean package
 mvn clean package -DskipTests
