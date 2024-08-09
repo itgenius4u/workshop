@@ -18,6 +18,7 @@ Book 삭제 : DELETE /api/books/{id}
 Book 대출 : POST /api/books/{bookId}/borrow/{userId}
 Book 반납 : POST /api/books/{bookId}/return
 
-
-
-
+Controller : @RestController
+Entity : @Entity
+Service : @Service => transaction(o,x) => Database(o,x)
+Repository => Mybatis => CRUD, DAO
