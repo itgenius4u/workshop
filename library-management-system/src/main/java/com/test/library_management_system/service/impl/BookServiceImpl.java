@@ -3,6 +3,7 @@ package com.test.library_management_system.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.test.library_management_system.entity.Book;
 import com.test.library_management_system.entity.User;
@@ -10,6 +11,7 @@ import com.test.library_management_system.repository.BookRepository;
 import com.test.library_management_system.repository.UserRepository;
 import com.test.library_management_system.service.BookService;
 
+@Service
 public class BookServiceImpl implements BookService {
 
      @Autowired
